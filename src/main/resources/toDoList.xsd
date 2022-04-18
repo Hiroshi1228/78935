@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://t4is.uv.mx/toDoList" xmlns:tns="https://t4is.uv.mx/toDoList" elementFormDefault="qualified">
+   <xs:element name="ToDoListRequest">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="tarea" type="xs:string" />
+            <xs:element name="tipoT" type="xs:string" />
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="ToDoListResponse">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="respuesta" type="xs:string" />
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="BuscarToDoListRequest" />
+   <xs:element name="BuscarToDoListResponse">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="tareas" maxOccurs="unbounded">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="no" type="xs:int"></xs:element>
+                     <xs:element name="tarea" type="xs:string"></xs:element>
+                     <xs:element name="tipoT" type="xs:string"></xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="ModificarToDoListRequest">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="no" type="xs:int" />
+            <xs:element name="tarea" type="xs:string" />
+            <xs:element name="tipoT" type="xs:string" />
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="ModificarToDoListResponse">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="respuesta" type="xs:boolean" />
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="BorrarToDoListRequest">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="no" type="xs:int" />
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="BorrarToDoListResponse">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="respuesta" type="xs:boolean" />
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema> 
