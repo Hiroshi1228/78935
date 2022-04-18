@@ -36,7 +36,6 @@ public class ToDoListEndPoint {
     @ResponsePayload
     public BuscarToDoListResponse buscarToDoList() {
         BuscarToDoListResponse respuesta = new BuscarToDoListResponse();
-        //recorrer la lista
         Iterable<ToDoListest> lista = itoDoListest.findAll();
         for (ToDoListest o : lista) {
             BuscarToDoListResponse.Tareas e = new BuscarToDoListResponse.Tareas();
@@ -52,7 +51,6 @@ public class ToDoListEndPoint {
     @ResponsePayload
     public ModificarToDoListResponse modificarToDoList(@RequestPayload ModificarToDoListRequest peticion) {
         ModificarToDoListResponse respuesta = new ModificarToDoListResponse();
-        //modificar la lista
         ToDoListest e = new ToDoListest();
         e.setNo(peticion.getNo());
         e.setTarea(peticion.getTarea());
@@ -66,7 +64,6 @@ public class ToDoListEndPoint {
     @ResponsePayload
     public BorrarToDoListResponse borrarToDoList(@RequestPayload BorrarToDoListRequest peticion) {
         BorrarToDoListResponse respuesta = new BorrarToDoListResponse();
-        //eliminar de la lista
         itoDoListest.deleteById(peticion.getNo());
         respuesta.setRespuesta(true);
         return respuesta;
