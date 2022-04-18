@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2022.04.17 a las 03:20:44 PM CDT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="https://t4is.uv.mx/toDoList">
+    <schemaBindings map="false">
+      <package name="https.t4is_uv_mx.todolist"/>
+    </schemaBindings>
+    <bindings scd="tns:BuscarToDoListResponse">
+      <class ref="https.t4is_uv_mx.todolist.BuscarToDoListResponse"/>
+    </bindings>
+    <bindings scd="tns:ToDoListRequest">
+      <class ref="https.t4is_uv_mx.todolist.ToDoListRequest"/>
+    </bindings>
+    <bindings scd="tns:ToDoListResponse">
+      <class ref="https.t4is_uv_mx.todolist.ToDoListResponse"/>
+    </bindings>
+    <bindings scd="tns:ModificarToDoListRequest">
+      <class ref="https.t4is_uv_mx.todolist.ModificarToDoListRequest"/>
+    </bindings>
+    <bindings scd="tns:ModificarToDoListResponse">
+      <class ref="https.t4is_uv_mx.todolist.ModificarToDoListResponse"/>
+    </bindings>
+    <bindings scd="tns:BorrarToDoListRequest">
+      <class ref="https.t4is_uv_mx.todolist.BorrarToDoListRequest"/>
+    </bindings>
+    <bindings scd="tns:BorrarToDoListResponse">
+      <class ref="https.t4is_uv_mx.todolist.BorrarToDoListResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+
